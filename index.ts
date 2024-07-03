@@ -420,3 +420,11 @@ function largestnum(arr:number[]){
 let num:number[] = [23,65,2,7,98,456]
 console.log(largestnum(num))
 
+for(let i =0; i<=100; i++){
+    if(i%2 === 0){
+        console.log(`${i} is an even number`);
+    }
+    else{
+        console.log(`${i} is an odd number`)
+    }
+}

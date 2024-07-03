@@ -366,11 +366,6 @@ arrayoperation();
 //     num.forEach((num)=> {console.log(num*2)})
 // }
 // array()
-function array() {
-    let num = [1, 2, 3, 4, 5];
-    console.log(`num*2`);
-}
-array();
 // function multiply(num:number[]){
 //     const newarr:number[]=num;
 //     console.log(newarr);
@@ -381,7 +376,9 @@ array();
 // }
 // multiply([2,8,9,5,12])
 // Assignment#4:
+// question:
 // Write a function findlargest that accept an array of numbers and return the largest number 
+// solution:
 function largestnum(arr) {
     let largest = 0;
     for (let i = 0; i < arr.length; i++) {
@@ -393,4 +390,12 @@ function largestnum(arr) {
 }
 let num = [23, 65, 2, 7, 98, 456];
 console.log(largestnum(num));
+for (let i = 0; i <= 100; i++) {
+    if (i % 2 === 0) {
+        console.log(`${i} is an even number`);
+    }
+    if (i % 2 === 1) {
+        console.log(`${i} is an odd number`);
+    }
+}
 export {};
