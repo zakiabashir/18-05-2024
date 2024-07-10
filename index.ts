@@ -406,25 +406,170 @@ arrayoperation()
 // question:
 // Write a function findlargest that accept an array of numbers and return the largest number 
 // solution:
-function largestnum(arr:number[]){
-    let largest:number=0;
+// function largestnum(arr:number[]){
+//     let largest:number=0;
 
-    for(let i=0; i<arr.length; i++){
-        if(arr[i]>largest){
-            largest=arr[i] ;
-        }
+//     for(let i=0; i<arr.length; i++){
+//         if(arr[i]>largest){
+//             largest=arr[i] ;
+//         }
        
-    }
-   return largest
-}
-let num:number[] = [23,65,2,7,98,456]
-console.log(largestnum(num))
+//     }
+//    return largest
+// }
+// let num:number[] = [23,65,2,7,98,456]
+// console.log(largestnum(num))
 
-for(let i =0; i<=100; i++){
-    if(i%2 === 0){
-        console.log(`${i} is an even number`);
-    }
-    else{
-        console.log(`${i} is an odd number`)
+// for(let i =0; i<=100; i++){
+//     if(i%2 === 0){
+//         console.log(`${i} is an even number`);
+//     }
+//     else{
+//         console.log(`${i} is an odd number`)
+//     }
+// }
+// today class 7/6/2024:
+// today topic is module:
+// modules ko hum reuse kly bnaty hn 
+//jub hum koi bra program likhty hn to humyn smjh nhi a rhi hoti to hum alag alag files bnaty hn or phr usy import kr dyty hn 
+// jis file ma hum pogram likhty hn us ma hum export krwaty hn or jis file ma use krty hn usy ma import krwaty hn
+// let population:string = "435, 657, 786" // pak.js file
+// export default population 
+// export ki two types hn :
+// 1:default export: aik file k ander srf aik hi default export hoga 
+// default export ko import krty hn to us ma {}curley brackets use nhi krty // import krty waqt iska name change kr skty hn
+// 2:simple export: curley bracket use krty hn // aik sy zyada bna skty hn //iska name change nhi kr skty //agr name change krna h to humyn as ka use krna pry ga
+// default export aik sy zyada nhi kr skty is liy hum ab cities ko esy export kryn gy
+// export{cities} jb simple export krty hn to curley brackets use krty hn
+// import population from "./pak.js"
+// importi ind_pop from "./ind.js"
+// import population {cities as pakistan_cities} from "./pak.js"
+// importi ind_pop {cities as indian_cities} from "./ind.js"
+// console.log('display population');
+// console.log('pakistan population : ' pak_pop);
+// console.log('pakistan population : ' ind_pop);
+// console.log("indian cities are: " pakistan_cities );
+// require: keyword ab use nhi hota ye phly use hota tha : // ab import export use hota h in acma version
+// import * as 
+// pori file import krney kly hum functional programing kryn gy // hum apna sara code aik functionn ya class ma likhyn gy or phr usko export kr dyn gy
+// ASSIGNMENT: WRITE four function subtraction, divisio, multiplication & addition in a file and then export 
+// export code /// make a file which we have use another files
+export function add(num1:number, num2:number){
+    console.log(num1+num2)
+}
+export function sub(num1:number,num2:number){
+    console.log(num1-num2)
+}
+export function mul(num1:number, num2:number){
+    console.log(num1*num2)
+}
+export function div(num1:number, num2:number){
+console.log(num1/num2)
+}
+// import code : /// writen in our main file
+// import {add,sub,mul,div} from "./module.js"
+// add(5,8);
+// sub(9,5);
+// mul(9,4);
+// div(8,2)
+// ======= object:========
+// let mydetails = {
+//     name:'zakia',
+//     age: 27,
+//     roll: 'mother',
+//     education:'bscs',
+//     study: 'countinue',
+//     responsibilities:'handling all over responsbilities which have; house,childs and education responsibilities'
+// }
+// console.log(mydetails);
+// console.log(`my name is ${mydetails.name}, i have ${mydetails.age} years old, i'm a ${mydetails.roll}`);
+
+// ====== object with annotation: ==========
+let mydetails:{
+    name:string;
+    age: number;
+    roll: string;
+    education:string;
+    study: string;
+    responsibilities:string;
+} = {
+    name:'zakia',
+    age: 27,
+    roll: 'mother',
+    education:'bscs',
+    study: 'countinue',
+    responsibilities:'handling all over responsbilities which have; house,childs and education responsibilities'
+}
+console.log(mydetails);
+console.log(`my name is ${mydetails.name}, i have ${mydetails.age} years old, i'm a ${mydetails.roll}`);
+//======== interface ========
+interface deta{
+    name:string;
+    age: number;
+    roll: string;
+    department:string;
+    education:string;
+    study: string;
+    responsibilities:string;
+}
+const student:deta = {
+    name:'ayesha',
+    age:24,
+    roll:'student',
+    department:'it',
+    education:'bscs',
+    study:'exit',
+    responsibilities: ' working on project',
+}
+console.log(student);
+let detstud = `${student.education} + ${mydetails.responsibilities}`
+console.log(detstud);
+// ----type alias -----
+type zimal = {
+    name:string;
+    age:number;
+    stage:string;
+}
+const zim = {
+    name:'zimal fatima',
+    age:1.3,
+    stage:'on learnig'
+
+}
+console.log(zim)
+type deta1 = {
+    name:string;
+    age: number;
+    roll: string;
+    department:string;
+    education:string;
+    study: string;
+    responsibilities:string;
+     zakia():number;
+     zimal1():number;
+        
+}
+// ==== intersection type ===
+type detazim = zimal & deta1 &{
+    
+}
+const deta2:detazim = {
+    name:'zimal fatima',
+    age:1.3, 
+    stage:'on learnig',
+    roll:'student',
+    department:'it',
+    education:'bscs',
+    study:'exit',
+    responsibilities: ' working on project',
+    zakia: function(){
+        let a=10;
+        let b=20;
+        return a+b && this.age;
+    },
+    zimal1: function(){
+        return this.age ;
     }
 }
+console.log(deta2.zakia());
+// console.log(deta2);
