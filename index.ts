@@ -1,6 +1,7 @@
 #! /usr/bin/env node
 import inquirer from "inquirer";
 import chalk from "chalk"
+// referal code : IT247 for ubl bank account
 // // // // // // homework:
 // // // // // // interfaces
 // // // //homework  1:call stack, 2:event loop, 3: call back que
@@ -573,3 +574,52 @@ const deta2:detazim = {
 }
 console.log(deta2.zakia());
 // console.log(deta2);
+// today Class content 7/13/24
+// today topic is sir zia repos
+// json syntex
+{
+    // "name" : "vapin",
+    // "age" : 23,
+    // "
+    // gender" : "female"
+}
+/// error type
+// / syntex error:such as
+// lett sum = a+b //// in this lettt is a syntex error
+// assignability error:
+// such as:
+let a = "hye";
+// a = 5; this is a assignability error because first we assign string but in reassingig we have use numbers
+// typing error:console.loger(a) // in this loger is a typing error
+// syntex : check on compiling time
+// logical statement check on runtime
+// syntex errors check during compilation 
+// chalk
+// union data types assign krney kly use hota h
+// is ma hum narrowing use krty hn or typeof as a guard narrowing use hoti h
+// terrnary operators is used as if else
+let age = Math.random() > 0.6? "khan":60
+interface Ball{
+    diameter:number
+}
+interface Sphere{
+    diameter:number
+}
+let ball:Ball = {
+    diameter:10
+};
+let sphere:Sphere = {
+    diameter:20
+};
+ball=sphere
+sphere=ball
+// 
+interface Tube{
+    diameter:number;
+    length:number
+}
+let tube:Tube = { //this is a fresh object //fresh object ma extra properties  add nhi kr skty
+    diameter:20,
+    length:10
+}
+ball = tube // this is a steal object // steal object ma hum extra properties add  kr skty
